@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brimley for Utah County Commissioner — Seat B</title>
+    <meta name="description" content="William 'Bill' Brimley for Utah County Commissioner — Seat B. Lower taxes, realistic budgets, transparent government. It's the right thing to do.">
+    <meta property="og:title" content="Brimley for Utah County Commissioner — Seat B">
+    <meta property="og:description" content="Anything but politics as usual. Lower taxes. Government efficiency. Open-door leadership.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://brimley4utah.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1b2d50;
+            --navy-deep: #111d33;
+            --navy-light: #2a4270;
+            --red: #b71c1c;
+            --red-dark: #8b1515;
+            --red-soft: #d32f2f;
+            --white: #ffffff;
+            --off-white: #f8f9fb;
+            --gray-50: #f1f3f5;
+            --gray-100: #e5e7eb;
+            --gray-200: #d1d5db;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --accent: #d4a84b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900);
+            line-height: 1.7;
+            background: var(--white);
+        }
+
+        img { max-width: 100%; height: auto; display: block; }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        /* Scroll reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(.25,.46,.45,.94), transform 0.6s cubic-bezier(.25,.46,.45,.94);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100);
+            height: 72px;
+            transition: box-shadow 0.3s;
+        }
+        .nav.scrolled { box-shadow: 0 1px 12px rgba(0,0,0,0.08); }
+
+        .nav-inner {
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        .nav-brand {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 900;
+            font-size: 1.25rem;
+            color: var(--navy);
+            text-decoration: none;
+            letter-spacing: 0.5px;
+        }
+        .nav-brand span { color: var(--red); }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--gray-700);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: var(--navy); }
+        .nav-links a.btn-red { color: var(--white); }
+        .nav-links a.btn-red:hover { color: var(--white); }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.7rem 1.5rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-red { background: var(--red); color: var(--white); }
+        .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(192,57,43,0.3); }
+        .btn-navy { background: var(--navy); color: var(--white); }
+        .btn-navy:hover { background: var(--navy-light); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(27,45,80,0.3); }
+        .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: var(--white); }
+        .btn-white { background: var(--white); color: var(--red); font-weight: 800; }
+        .btn-white:hover { background: var(--gray-50); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(0,0,0,0.15); }
+        .btn-lg { padding: 0.9rem 2rem; font-size: 1rem; }
+        .btn-sm { padding: 0.5rem 1rem; font-size: 0.8rem; }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 24px; height: 2px;
+            background: var(--gray-900);
+            margin: 6px 0;
+            border-radius: 2px;
+            transition: 0.3s;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding-top: 72px;
+            background: linear-gradient(165deg, var(--navy-deep) 0%, var(--navy) 40%, var(--navy-light) 100%);
+            position: relative;
+            overflow: hidden;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-mountains {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            opacity: 0.08;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            padding: 5rem 0;
+        }
+
+        .hero-text { color: var(--white); text-align: left; }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 0.35rem 0.9rem;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1.75rem;
+        }
+
+        .hero-badge-dot {
+            width: 6px; height: 6px;
+            background: var(--red);
+            border-radius: 50%;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.75rem;
+            font-weight: 900;
+            line-height: 1.08;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 2.5rem;
+            max-width: 540px;
+            line-height: 1.75;
+        }
+
+        .hero-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+        }
+        .hero-photo img {
+            max-width: 480px;
+            border-radius: 16px;
+            box-shadow: 0 32px 80px rgba(0,0,0,0.4);
+        }
+
+        /* ===== FRUSTRATION SECTION (Brooks Benson style) ===== */
+        .frustration {
+            padding: 6rem 0;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .frust-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        .frust-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: var(--gray-900);
+            margin-bottom: 1.25rem;
+            line-height: 1.15;
+        }
+
+        .frust-desc {
+            font-size: 1.1rem;
+            color: var(--gray-500);
+            max-width: 620px;
+            margin: 0 auto 3.5rem;
+            line-height: 1.75;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 2.25rem 1.5rem;
+            text-align: center;
+            border: 1px solid var(--gray-100);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .stat-number {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.75rem;
+            font-weight: 900;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            line-height: 1.4;
+        }
+
+        .frust-quote {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            font-style: italic;
+            color: var(--gray-700);
+            max-width: 600px;
+            margin: 0 auto;
+            padding-top: 2rem;
+            border-top: 2px solid var(--gray-100);
+            line-height: 1.5;
+        }
+
+        /* ===== SOLUTIONS / PLAN ===== */
+        .solutions {
+            padding: 6rem 0;
+            background: var(--gray-50);
+        }
+
+        .solutions-header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        .eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        .sec-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gray-900);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .sec-desc {
+            font-size: 1.05rem;
+            color: var(--gray-500);
+            max-width: 580px;
+            margin: 0 auto;
+            line-height: 1.75;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .sol-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.25rem;
+            border: 1px solid var(--gray-100);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .sol-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.07);
+        }
+
+        .sol-icon {
+            width: 48px; height: 48px;
+            background: var(--navy);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+            font-size: 1.4rem;
+            color: var(--white);
+        }
+
+        .sol-card h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .sol-card p {
+            font-size: 0.95rem;
+            color: var(--gray-500);
+            line-height: 1.7;
+        }
+
+        /* ===== ABOUT ===== */
+        .about {
+            padding: 6rem 0;
+            background: var(--white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-photo img {
+            border-radius: 12px;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.1);
+        }
+
+        .about-text .eyebrow { text-align: left; }
+
+        .about-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.25rem;
+            font-weight: 900;
+            color: var(--gray-900);
+            margin-bottom: 1.25rem;
+            line-height: 1.2;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            color: var(--gray-500);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+        }
+
+        .about-text p strong { color: var(--gray-900); }
+
+        .service-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.5rem 1.5rem;
+            margin: 1.5rem 0 2rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--gray-700);
+            padding: 0.4rem 0;
+        }
+
+        .service-item::before {
+            content: '';
+            width: 8px; height: 8px;
+            background: var(--red);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        /* ===== EXPERIENCE ===== */
+        .experience {
+            padding: 5rem 0;
+            background: var(--navy-deep);
+            color: var(--white);
+        }
+
+        .exp-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .exp-left .eyebrow { color: var(--accent); text-align: left; }
+
+        .exp-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.25rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .exp-checks {
+            list-style: none;
+        }
+
+        .exp-checks li {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+            padding: 0.75rem 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .exp-checks li:last-child { border-bottom: none; }
+
+        .exp-check-icon {
+            width: 28px; height: 28px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.85rem;
+        }
+
+        .exp-right {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+        }
+
+        .exp-right h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .exp-right p {
+            color: rgba(255,255,255,0.65);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* ===== SONG ===== */
+        .song {
+            padding: 5rem 0;
+            background: var(--gray-50);
+            text-align: center;
+        }
+
+        .song-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 520px;
+            margin: 0 auto;
+            border: 1px solid var(--gray-100);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+        }
+
+        .song-note { font-size: 2rem; margin-bottom: 0.75rem; }
+
+        .song-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.75rem;
+            color: var(--gray-900);
+            margin-bottom: 0.5rem;
+        }
+
+        .song-card > p {
+            color: var(--gray-500);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .song-qr {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 14px;
+            width: 200px;
+            margin: 0 auto 1rem;
+        }
+        .song-qr img { width: 100%; border-radius: 6px; }
+
+        .song-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        /* ===== DONATE ===== */
+        .donate {
+            padding: 6rem 0;
+            background: var(--white);
+            text-align: center;
+        }
+
+        .donate-card {
+            background: var(--gray-50);
+            border-radius: 16px;
+            padding: 3rem;
+            max-width: 520px;
+            margin: 2.5rem auto 0;
+            border: 1px solid var(--gray-100);
+        }
+
+        .donate-card h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem;
+            color: var(--gray-900);
+            margin-bottom: 0.75rem;
+        }
+
+        .donate-card > p {
+            color: var(--gray-500);
+            margin-bottom: 2rem;
+            font-size: 0.95rem;
+        }
+
+        .donate-qr {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 14px;
+            width: 240px;
+            margin: 0 auto 1.25rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+        }
+        .donate-qr img { width: 100%; border-radius: 6px; }
+
+        .donate-handle {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: var(--navy);
+            margin-bottom: 0.25rem;
+        }
+
+        .donate-sub {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-bottom: 1.75rem;
+        }
+
+        .donate-divider {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            color: var(--gray-500);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .donate-divider::before,
+        .donate-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--gray-200);
+        }
+
+        .donate-disclaimer {
+            margin-top: 2rem;
+            font-size: 0.7rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== CONTACT ===== */
+        .contact {
+            padding: 5rem 0;
+            background: var(--gray-50);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+        }
+
+        .contact-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid var(--gray-100);
+            transition: transform 0.2s;
+        }
+        .contact-card:hover { transform: translateY(-3px); }
+
+        .contact-icon {
+            width: 48px; height: 48px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            font-size: 1.25rem;
+            color: var(--white);
+        }
+
+        .contact-card h4 {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.4rem;
+        }
+
+        .contact-card a,
+        .contact-card p {
+            color: var(--gray-900);
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+        .contact-card a:hover { color: var(--red); }
+
+        /* ===== FINAL CTA ===== */
+        .final-cta {
+            padding: 5rem 0;
+            background: var(--red);
+            text-align: center;
+            color: var(--white);
+        }
+
+        .final-cta h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.85);
+            max-width: 500px;
+            margin: 0 auto 2rem;
+            line-height: 1.7;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 2.5rem 0;
+            background: var(--navy-deep);
+            text-align: center;
+            color: rgba(255,255,255,0.45);
+        }
+
+        .footer-brand {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: rgba(255,255,255,0.75);
+            margin-bottom: 0.25rem;
+        }
+
+        .footer p { font-size: 0.8rem; margin-bottom: 0.15rem; }
+
+        .footer-legal {
+            margin-top: 0.75rem;
+            font-size: 0.7rem;
+            color: rgba(255,255,255,0.25);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 900px) {
+            .hero-inner { padding: 3rem 0; grid-template-columns: 1fr; text-align: center; }
+            .hero-text { text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .hero-photo { order: -1; }
+            .hero-photo img { max-width: 280px; margin: 0 auto; }
+            .hero-title { font-size: 2.5rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .solutions-grid { grid-template-columns: 1fr; }
+            .exp-inner { grid-template-columns: 1fr; gap: 2rem; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .frust-title, .sec-title, .about-title, .exp-title { font-size: 1.85rem; }
+            .about-grid { grid-template-columns: 1fr; text-align: center; }
+            .about-photo img { max-width: 280px; margin: 0 auto; }
+            .about-text .eyebrow { text-align: center; }
+            .service-items { grid-template-columns: 1fr; }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 72px; left: 0; right: 0;
+                background: var(--white);
+                flex-direction: column;
+                padding: 1rem 1.5rem 1.5rem;
+                gap: 0;
+                border-bottom: 1px solid var(--gray-100);
+                box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            }
+            .nav-links.open { display: flex; }
+            .nav-links li {
+                padding: 0.65rem 0;
+                border-bottom: 1px solid var(--gray-50);
+            }
+            .nav-links li:last-child { border-bottom: none; padding-top: 0.75rem; }
+            .nav-toggle { display: block; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 2rem; }
+            .stat-number { font-size: 2rem; }
+            .final-cta h2 { font-size: 1.75rem; }
+            .donate-card, .song-card { padding: 2rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand">Brimley <span>for Utah</span></a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#issues">Issues</a></li>
+                <li><a href="#plan">Plan</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#donate" class="btn btn-red btn-sm">Donate</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-mountains">
+            <svg viewBox="0 0 1440 320" preserveAspectRatio="none" style="width:100%;height:320px;">
+                <polygon fill="rgba(255,255,255,0.03)" points="0,320 200,120 400,200 600,80 800,180 1000,60 1200,150 1440,100 1440,320"/>
+                <polygon fill="rgba(255,255,255,0.05)" points="0,320 150,180 350,240 550,140 750,220 950,120 1150,200 1440,160 1440,320"/>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="hero-inner">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="hero-badge-dot"></span>
+                        Commissioner — Seat B
+                    </div>
+                    <h1 class="hero-title">Lower Taxes.<br>Honest Budget.<br><em>Your Voice.</em></h1>
+                    <p class="hero-subtitle">William "Bill" Brimley is running for Utah County Commissioner because government should serve citizens — not itself. It's the right thing to do.</p>
+                    <div class="hero-buttons">
+                        <a href="#donate" class="btn btn-red btn-lg">Support the Campaign</a>
+                        <a href="#plan" class="btn btn-outline btn-lg" style="color:var(--white);border-color:rgba(255,255,255,0.4);">See the Plan</a>
+                    </div>
+                </div>
+                <div class="hero-photo">
+                    <img src="images/bill-headshot.jpg" alt="William Bill Brimley — Candidate for Utah County Commissioner Seat B">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRUSTRATION: You're Frustrated (Brooks Benson style) -->
+    <section class="frustration" id="issues">
+        <div class="container">
+            <div class="reveal">
+                <p class="frust-eyebrow">What's happening at the county</p>
+                <h2 class="frust-title">You're Paying More.<br>Getting Less.</h2>
+                <p class="frust-desc">While Utah County families tighten their belts, county government keeps growing. Here's what your tax dollars are funding.</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card reveal reveal-delay-1">
+                    <div class="stat-icon">&#128200;</div>
+                    <div class="stat-number">6 &rarr; 20</div>
+                    <div class="stat-label">Commissioner staff expanded in recent years</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-2">
+                    <div class="stat-icon">&#9992;&#65039;</div>
+                    <div class="stat-number">$20,000</div>
+                    <div class="stat-label">Personal travel fund per commissioner</div>
+                </div>
+                <div class="stat-card reveal reveal-delay-3">
+                    <div class="stat-icon">&#128176;</div>
+                    <div class="stat-number">$240K+</div>
+                    <div class="stat-label">Total compensation per commissioner (with benefits)</div>
+                </div>
+            </div>
+            <p class="frust-quote reveal">"Utah County families are tightening their belts. County government should do the same."</p>
+        </div>
+    </section>
+
+    <!-- SOLUTIONS / PLAN -->
+    <section class="solutions" id="plan">
+        <div class="container">
+            <div class="solutions-header reveal">
+                <p class="eyebrow">A Common-Sense Plan</p>
+                <h2 class="sec-title">A Better Approach for Utah County</h2>
+                <p class="sec-desc">Bill Brimley has a plan built on 20+ years of real-world business experience — not theoretical policy debates.</p>
+            </div>
+            <div class="solutions-grid">
+                <div class="sol-card reveal reveal-delay-1">
+                    <div class="sol-icon">&#128181;</div>
+                    <h3>Lower Property Tax Rates</h3>
+                    <p>Committed to reducing the tax burden on families, seniors, and small businesses across Utah County. Your money should stay in your pocket.</p>
+                </div>
+                <div class="sol-card reveal reveal-delay-2">
+                    <div class="sol-icon">&#128202;</div>
+                    <h3>Realistic Budgets</h3>
+                    <p>Set achievable goals — and stick to them. No more runaway spending. Fiscal discipline means prioritizing what Utah County actually needs.</p>
+                </div>
+                <div class="sol-card reveal reveal-delay-1">
+                    <div class="sol-icon">&#128270;</div>
+                    <h3>Transparent Operations</h3>
+                    <p>From courts to law enforcement to administration, citizens deserve clarity about how their tax dollars are spent. Open books, open doors.</p>
+                </div>
+                <div class="sol-card reveal reveal-delay-2">
+                    <div class="sol-icon">&#129309;</div>
+                    <h3>Citizen-First Leadership</h3>
+                    <p>William "Bill" Brimley works for the people — not the bureaucracy. Fresh eyes. Open door. Listening to you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-photo reveal">
+                    <img src="images/bill-headshot.jpg" alt="Bill Brimley">
+                </div>
+                <div class="about-text">
+                    <p class="eyebrow reveal">Meet Bill</p>
+                    <h2 class="about-title reveal">Anything But Politics As Usual</h2>
+                    <div class="reveal">
+                        <p>William Brimley is a small business owner, community leader, and longtime volunteer who believes government should serve citizens — <strong>not itself.</strong></p>
+                        <p>With over 20 years of business experience, he understands budgets, accountability, and responsibility. He has lived the realities of growth, setbacks, and meeting payroll — not theoretical policy debates.</p>
+                    </div>
+                    <div class="service-items reveal">
+                        <span class="service-item">Founder of two BNI chapters</span>
+                        <span class="service-item">Past President of Rotary</span>
+                        <span class="service-item">Volunteer musician for care facilities</span>
+                        <span class="service-item">Meals on Wheels volunteer</span>
+                        <span class="service-item">Tabitha's Way food pantry</span>
+                        <span class="service-item">20+ years business owner</span>
+                    </div>
+                    <div class="reveal">
+                        <a href="#plan" class="btn btn-outline">See Bill's Plan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="exp-inner">
+                <div class="exp-left">
+                    <p class="eyebrow reveal">Experience That Matters</p>
+                    <h2 class="exp-title reveal">Over 20 Years Running a Real Business.</h2>
+                    <ul class="exp-checks reveal">
+                        <li><span class="exp-check-icon">&#10003;</span> Understands payroll.</li>
+                        <li><span class="exp-check-icon">&#10003;</span> Understands budgeting.</li>
+                        <li><span class="exp-check-icon">&#10003;</span> Understands risk.</li>
+                        <li><span class="exp-check-icon">&#10003;</span> Understands responsibility.</li>
+                    </ul>
+                </div>
+                <div class="exp-right reveal">
+                    <h3>Government Should Run Like a Business.</h3>
+                    <p>Not with bloated budgets and unchecked spending — but with discipline, accountability, and respect for the people who pay the bills.</p>
+                    <a href="#donate" class="btn btn-red btn-lg">Support Bill Brimley</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SONG -->
+    <section class="song">
+        <div class="container">
+            <div class="song-card reveal">
+                <div class="song-note">&#9835;</div>
+                <h3>Utah County Strong</h3>
+                <p>An original song written in honor of Utah County and its people.</p>
+                <div class="song-qr">
+                    <img src="images/song-qr.jpg" alt="Scan to listen to Utah County Strong">
+                </div>
+                <p class="song-label">Scan to Listen</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- DONATE -->
+    <section class="donate" id="donate">
+        <div class="container">
+            <div class="reveal">
+                <p class="eyebrow">Support the Campaign</p>
+                <h2 class="sec-title">Help Bill Fight for Utah County</h2>
+                <p class="sec-desc" style="margin-bottom:0;">Every dollar goes directly toward reaching voters and bringing common-sense leadership to our county.</p>
+            </div>
+            <div class="donate-card reveal">
+                <h3>Donate via Venmo</h3>
+                <p>Scan the QR code or search for Bill on Venmo.</p>
+                <div class="donate-qr">
+                    <img src="images/venmo-qr.jpg" alt="Donate to Brimley for Utah via Venmo @Bill-Brimley-1">
+                </div>
+                <p class="donate-handle">@Bill-Brimley-1</p>
+                <p class="donate-sub">Venmo</p>
+                <div class="donate-divider">or</div>
+                <a href="mailto:brimley4utah@gmail.com?subject=Campaign%20Donation%20Inquiry" class="btn btn-navy">Contact for Other Ways to Give</a>
+                <p class="donate-disclaimer">Paid for by Committee to Elect Bill Brimley</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div style="text-align:center;" class="reveal">
+                <p class="eyebrow">Get in Touch</p>
+                <h2 class="sec-title">Open-Door Leadership Starts Here</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal reveal-delay-1">
+                    <div class="contact-icon">&#128222;</div>
+                    <h4>Phone</h4>
+                    <a href="tel:8017096575">801-709-6575</a>
+                </div>
+                <div class="contact-card reveal reveal-delay-2">
+                    <div class="contact-icon">&#9993;</div>
+                    <h4>Email</h4>
+                    <a href="mailto:brimley4utah@gmail.com">brimley4utah@gmail.com</a>
+                </div>
+                <div class="contact-card reveal reveal-delay-3">
+                    <div class="contact-icon">&#127760;</div>
+                    <h4>Website</h4>
+                    <p>brimley4utah.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <div class="container reveal">
+            <h2>It's the Right Thing to Do.</h2>
+            <p>Join Bill Brimley in bringing common-sense, citizen-first leadership back to Utah County.</p>
+            <a href="#donate" class="btn btn-white btn-lg">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p class="footer-brand">Brimley for Utah County</p>
+        <p>Commissioner — Seat B</p>
+        <p class="footer-legal">Paid for by Committee to Elect Bill Brimley</p>
+    </footer>
+
+    <script>
+        (function() {
+            var nav = document.getElementById('nav');
+            var navToggle = document.getElementById('navToggle');
+            var navLinks = document.getElementById('navLinks');
+
+            window.addEventListener('scroll', function() {
+                nav.classList.toggle('scrolled', window.scrollY > 20);
+            });
+
+            navToggle.addEventListener('click', function() {
+                navLinks.classList.toggle('open');
+            });
+
+            navLinks.querySelectorAll('a').forEach(function(link) {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('open');
+                });
+            });
+
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+
+            document.querySelectorAll('.reveal').forEach(function(el) {
+                observer.observe(el);
+            });
+        })();
+    </script>
+
+</body>
+</html>
