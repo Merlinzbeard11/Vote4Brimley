@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Just Ski the Snow Underneath You — Bill Brimley</title>
-    <meta name="description" content="A story from Bill Brimley about his father, legendary skier Alf Engen, and the lesson that shapes how he'll lead Utah County.">
-    <meta property="og:title" content="Just Ski the Snow Underneath You — Bill Brimley">
-    <meta property="og:description" content="A lesson from Alf Engen that shapes how Bill Brimley will lead Utah County.">
-    <meta property="og:type" content="article">
+    <title>Stories From Bill — Brimley for Utah County</title>
+    <meta name="description" content="Personal stories from William 'Bill' Brimley — lessons that shape his approach to leadership and service in Utah County.">
+    <meta property="og:title" content="Stories From Bill — Brimley for Utah County">
+    <meta property="og:description" content="Personal stories that shape Bill Brimley's approach to leadership and service.">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://brimley4utah.com/story.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,141 +30,91 @@
         html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            color: var(--gray-900);
-            line-height: 1.75;
-            background: var(--white);
+            color: var(--gray-900); line-height: 1.75; background: var(--white);
         }
         img { max-width: 100%; height: auto; display: block; }
-        a { color: var(--red); }
+        a { color: var(--red); text-decoration: none; }
 
         .nav {
             position: fixed; top:0; left:0; right:0; z-index:1000;
-            background: rgba(255,255,255,0.97);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--gray-100);
-            height: 72px;
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100); height: 72px;
         }
         .nav-inner {
             max-width: 1140px; margin: 0 auto; padding: 0 1.5rem;
-            display: flex; align-items: center; justify-content: space-between;
-            height: 100%;
+            display: flex; align-items: center; justify-content: space-between; height: 100%;
         }
         .nav-brand {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-weight: 900; font-size: 1.25rem;
-            color: var(--navy); text-decoration: none; letter-spacing: 0.5px;
+            font-family: 'Playfair Display', Georgia, serif; font-weight: 900;
+            font-size: 1.25rem; color: var(--navy); letter-spacing: 0.5px;
         }
         .nav-brand span { color: var(--red); }
-        .nav-back {
-            font-size: 0.95rem; color: var(--navy); text-decoration: none;
-            font-weight: 600;
-        }
+        .nav-back { font-size: 0.95rem; color: var(--navy); font-weight: 600; }
         .nav-back:hover { color: var(--red); }
 
-        .story-hero {
-            padding: 140px 1.5rem 60px;
+        .hero {
+            padding: 140px 1.5rem 70px;
             background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
-            color: var(--white);
-            text-align: center;
+            color: var(--white); text-align: center;
         }
-        .story-hero .eyebrow {
-            display: inline-block;
-            font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;
-            color: var(--accent); font-weight: 700; margin-bottom: 1rem;
+        .hero .eyebrow {
+            display: inline-block; font-size: 0.8rem; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 1rem;
         }
-        .story-hero h1 {
+        .hero h1 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 900; line-height: 1.15; max-width: 820px; margin: 0 auto 1rem;
+            font-size: clamp(2.25rem, 5vw, 3.75rem); font-weight: 900;
+            line-height: 1.1; max-width: 820px; margin: 0 auto 1rem;
         }
-        .story-hero p.lede {
+        .hero p {
             max-width: 640px; margin: 0 auto;
-            color: rgba(255,255,255,0.85); font-size: 1.05rem;
+            color: rgba(255,255,255,0.85); font-size: 1.1rem;
         }
 
-        .story-photo {
-            max-width: 720px; margin: -40px auto 0; padding: 0 1.5rem;
+        .stories {
+            padding: 80px 1.5rem;
+            max-width: 1100px; margin: 0 auto;
         }
-        .story-photo img {
-            border-radius: 8px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.25);
-            border: 6px solid var(--white);
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
-        .story-photo figcaption {
-            text-align: center; font-size: 0.85rem; color: var(--gray-500);
-            margin-top: 0.75rem; font-style: italic;
-        }
-
-        .story-body {
-            max-width: 680px; margin: 0 auto; padding: 60px 1.5rem 40px;
-            font-size: 1.125rem; color: var(--gray-700);
-        }
-        .story-body p { margin-bottom: 1.4rem; }
-        .story-body p.first::first-letter {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 3.6rem; font-weight: 900; float: left;
-            line-height: 0.9; padding: 0.3rem 0.6rem 0 0; color: var(--navy);
-        }
-        .story-body blockquote {
-            border-left: 4px solid var(--red);
-            padding: 0.5rem 0 0.5rem 1.5rem;
-            margin: 1.6rem 0;
-            font-family: 'Playfair Display', Georgia, serif;
-            font-style: italic;
-            font-size: 1.35rem;
-            color: var(--navy);
-            line-height: 1.5;
-        }
-        .story-body ol {
-            margin: 1rem 0 1.5rem 1.5rem;
+        .story-card {
+            display: block;
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.10);
+            transition: transform 0.2s, box-shadow 0.2s;
             color: var(--gray-900);
         }
-        .story-body ol li { margin-bottom: 0.4rem; }
-        .story-body h2 {
+        .story-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 50px rgba(0,0,0,0.16);
+        }
+        .story-card-img {
+            width: 100%; height: 260px; overflow: hidden; background: var(--off-white);
+        }
+        .story-card-img img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
+        .story-card-body { padding: 1.75rem 1.75rem 2rem; }
+        .story-card-eyebrow {
+            font-size: 0.75rem; letter-spacing: 1.5px; text-transform: uppercase;
+            color: var(--red); font-weight: 700; margin-bottom: 0.6rem;
+        }
+        .story-card h2 {
             font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.6rem; color: var(--navy);
-            margin: 2rem 0 1rem;
+            font-size: 1.75rem; color: var(--navy); line-height: 1.2;
+            margin-bottom: 0.85rem;
         }
-
-        .story-signoff {
-            max-width: 680px; margin: 0 auto; padding: 0 1.5rem 60px;
-            text-align: center;
+        .story-card p {
+            color: var(--gray-700); font-size: 1rem; margin-bottom: 1.25rem;
         }
-        .story-signoff .name {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.5rem; font-weight: 900; color: var(--navy);
+        .story-card .read-more {
+            color: var(--red); font-weight: 700; font-size: 0.95rem;
         }
-        .story-signoff .role {
-            color: var(--gray-500); font-size: 0.95rem;
-            margin-bottom: 0.25rem;
-        }
-        .story-signoff .phone { font-weight: 600; color: var(--gray-700); }
-
-        .story-cta {
-            background: var(--off-white);
-            padding: 60px 1.5rem;
-            text-align: center;
-            border-top: 1px solid var(--gray-100);
-        }
-        .story-cta h3 {
-            font-family: 'Playfair Display', Georgia, serif;
-            font-size: 1.75rem; color: var(--navy); margin-bottom: 1rem;
-        }
-        .story-cta p { color: var(--gray-700); max-width: 540px; margin: 0 auto 1.5rem; }
-        .btn {
-            display: inline-block; padding: 0.85rem 1.75rem;
-            border-radius: 6px; text-decoration: none; font-weight: 700;
-            font-size: 0.95rem; letter-spacing: 0.3px;
-            transition: transform 0.15s, box-shadow 0.15s;
-            margin: 0.35rem;
-        }
-        .btn-red { background: var(--red); color: var(--white); }
-        .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
-        .btn-outline {
-            background: transparent; color: var(--navy);
-            border: 2px solid var(--navy);
-        }
-        .btn-outline:hover { background: var(--navy); color: var(--white); }
 
         .footer {
             background: var(--navy-deep); color: rgba(255,255,255,0.7);
@@ -175,12 +125,6 @@
             font-weight: 900; color: var(--white); font-size: 1.15rem;
         }
         .footer-legal { font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7; }
-
-        @media (max-width: 600px) {
-            .story-hero { padding-top: 110px; }
-            .story-body { font-size: 1.05rem; }
-            .story-body blockquote { font-size: 1.15rem; }
-        }
     </style>
 </head>
 <body>
@@ -192,78 +136,40 @@
         </div>
     </nav>
 
-    <section class="story-hero">
-        <span class="eyebrow">A Story From Bill</span>
-        <h1>Just Ski the Snow<br>Underneath You</h1>
-        <p class="lede">A lesson from a legendary skier — and the mindset Bill brings to Utah County.</p>
+    <section class="hero">
+        <span class="eyebrow">In Bill's Own Words</span>
+        <h1>Stories From Bill</h1>
+        <p>Short stories — and the lessons behind them — that shape how Bill will serve Utah County.</p>
     </section>
 
-    <figure class="story-photo">
-        <img src="images/wilford-ski.jpg" alt="Wilford Brimley skiing at Alta">
-        <figcaption>Wilford Brimley, Bill's father, skiing at Alta.</figcaption>
-    </figure>
+    <section class="stories">
+        <div class="stories-grid">
 
-    <article class="story-body">
-        <p class="first">A few of you know, my dad had a close friendship with Alf Engen — a legendary skier and a man who helped build Alta right here in Utah.</p>
+            <a href="story-ski.html" class="story-card">
+                <div class="story-card-img">
+                    <img src="images/wilford-ski.jpg" alt="Wilford Brimley skiing at Alta">
+                </div>
+                <div class="story-card-body">
+                    <p class="story-card-eyebrow">A Lesson From Alta</p>
+                    <h2>Just Ski the Snow Underneath You</h2>
+                    <p>Bill's father, Wilford, learned a lesson from legendary skier Alf Engen on a hard day on the mountain — and it shapes how Bill faces big problems today.</p>
+                    <span class="read-more">Read the story &rarr;</span>
+                </div>
+            </a>
 
-        <p>One day they were skiing together, and my dad caught an edge on the ice and went down hard — broke his collarbone.</p>
+            <a href="story-service.html" class="story-card">
+                <div class="story-card-img">
+                    <img src="images/bill-headshot.jpg" alt="Bill Brimley">
+                </div>
+                <div class="story-card-body">
+                    <p class="story-card-eyebrow">Why I Serve</p>
+                    <h2>The Only Thing We Leave Behind</h2>
+                    <p>A broken-down truck in a town where Bill knew no one — and a stranger's kindness that changed his life and shaped a lifetime of service.</p>
+                    <span class="read-more">Read the story &rarr;</span>
+                </div>
+            </a>
 
-        <p>Alf skied over and said, "Well, Wilford… I think I heard something snap. What happened?"</p>
-
-        <p>Dad said, "I'm pretty sure I busted my collarbone."</p>
-
-        <p>Alf said, "Well, we can call the meat wagon and they'll come get you… or you can ski down."</p>
-
-        <p>Dad said, "Oh, Alf, I'm in so much pain, I don't think I can ski down this mountain."</p>
-
-        <blockquote>"Oh, Wilford… you don't have to ski down the mountain. You just ski on the snow underneath you. You'll get down just fine."</blockquote>
-
-        <p>Dad said it was like a light flipped on for him. And he told me right up to the very end of his life:</p>
-
-        <blockquote>"Son… the snow underneath me is still pretty good. I think I'll just ski on that."</blockquote>
-
-        <p>That lesson has stayed with me.</p>
-
-        <h2>The Mountain in Front of Us</h2>
-
-        <p>Right now, in Utah County, it can feel like we're staring at a pretty big mountain:</p>
-
-        <ol>
-            <li>Growth</li>
-            <li>Traffic</li>
-            <li>Taxes</li>
-            <li>Transparency</li>
-        </ol>
-
-        <p>And a lot of people feel like it's too much — like we can't fix it.</p>
-
-        <p>But I don't see it that way.</p>
-
-        <p>We don't have to solve everything overnight. We just focus on the snow underneath us:</p>
-
-        <ol>
-            <li>Make better, more transparent decisions</li>
-            <li>Respect taxpayers</li>
-            <li>Listen to the people we serve</li>
-            <li>And take the next right step</li>
-        </ol>
-
-        <p>That's how you get down the mountain.</p>
-
-        <p>That's the kind of leadership I will bring to Utah County.</p>
-    </article>
-
-    <div class="story-signoff">
-        <p class="name">William (Bill) Brimley</p>
-        <p class="role">Utah County Commissioner — Seat B</p>
-        <p class="phone">801-709-6575</p>
-    </div>
-
-    <section class="story-cta">
-        <h3>If this resonates, I'd love to connect.</h3>
-        <p>Help bring common-sense, transparent leadership to Utah County.</p>
-        <a href="index.html#donate" class="btn btn-red">Support the Campaign</a>
-        <a href="index.html" class="btn btn-outline">Back to Home</a>
+        </div>
     </section>
 
     <footer class="footer">

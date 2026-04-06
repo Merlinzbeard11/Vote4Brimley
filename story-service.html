@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Only Thing We Leave Behind — Bill Brimley</title>
+    <meta name="description" content="A stranger's kindness in a Utah town changed Bill Brimley's life — and shaped why he serves today.">
+    <meta property="og:title" content="The Only Thing We Leave Behind — Bill Brimley">
+    <meta property="og:description" content="A stranger's kindness changed Bill Brimley's life — and shaped why he serves today.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://brimley4utah.com/story-service.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #1b2d50;
+            --navy-deep: #111d33;
+            --red: #b71c1c;
+            --red-dark: #8b1515;
+            --white: #ffffff;
+            --off-white: #f8f9fb;
+            --gray-100: #e5e7eb;
+            --gray-500: #6b7280;
+            --gray-700: #374151;
+            --gray-900: #111827;
+            --accent: #d4a84b;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-900); line-height: 1.75; background: var(--white);
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: var(--red); }
+
+        .nav {
+            position: fixed; top:0; left:0; right:0; z-index:1000;
+            background: rgba(255,255,255,0.97); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-100); height: 72px;
+        }
+        .nav-inner {
+            max-width: 1140px; margin: 0 auto; padding: 0 1.5rem;
+            display: flex; align-items: center; justify-content: space-between; height: 100%;
+        }
+        .nav-brand {
+            font-family: 'Playfair Display', Georgia, serif; font-weight: 900;
+            font-size: 1.25rem; color: var(--navy); text-decoration: none; letter-spacing: 0.5px;
+        }
+        .nav-brand span { color: var(--red); }
+        .nav-back { font-size: 0.95rem; color: var(--navy); text-decoration: none; font-weight: 600; }
+        .nav-back:hover { color: var(--red); }
+
+        .story-hero {
+            padding: 140px 1.5rem 80px;
+            background: linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 100%);
+            color: var(--white); text-align: center;
+        }
+        .story-hero .eyebrow {
+            display: inline-block; font-size: 0.8rem; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 1rem;
+        }
+        .story-hero h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; line-height: 1.15;
+            max-width: 820px; margin: 0 auto 1rem;
+        }
+        .story-hero p.lede {
+            max-width: 640px; margin: 0 auto;
+            color: rgba(255,255,255,0.85); font-size: 1.05rem;
+        }
+
+        .story-body {
+            max-width: 680px; margin: 0 auto; padding: 60px 1.5rem 40px;
+            font-size: 1.125rem; color: var(--gray-700);
+        }
+        .story-body p { margin-bottom: 1.4rem; }
+        .story-body p.first::first-letter {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 3.6rem; font-weight: 900; float: left;
+            line-height: 0.9; padding: 0.3rem 0.6rem 0 0; color: var(--navy);
+        }
+        .story-body blockquote {
+            border-left: 4px solid var(--red);
+            padding: 0.5rem 0 0.5rem 1.5rem; margin: 1.6rem 0;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-style: italic; font-size: 1.35rem; color: var(--navy); line-height: 1.5;
+        }
+        .story-body h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.6rem; color: var(--navy); margin: 2rem 0 1rem;
+        }
+
+        .story-signoff {
+            max-width: 680px; margin: 0 auto; padding: 0 1.5rem 60px; text-align: center;
+        }
+        .story-signoff .name {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.5rem; font-weight: 900; color: var(--navy);
+        }
+        .story-signoff .role { color: var(--gray-500); font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .story-signoff .phone { font-weight: 600; color: var(--gray-700); }
+
+        .story-cta {
+            background: var(--off-white); padding: 60px 1.5rem;
+            text-align: center; border-top: 1px solid var(--gray-100);
+        }
+        .story-cta h3 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.75rem; color: var(--navy); margin-bottom: 1rem;
+        }
+        .story-cta p { color: var(--gray-700); max-width: 540px; margin: 0 auto 1.5rem; }
+        .btn {
+            display: inline-block; padding: 0.85rem 1.75rem; border-radius: 6px;
+            text-decoration: none; font-weight: 700; font-size: 0.95rem;
+            letter-spacing: 0.3px; transition: transform 0.15s; margin: 0.35rem;
+        }
+        .btn-red { background: var(--red); color: var(--white); }
+        .btn-red:hover { background: var(--red-dark); transform: translateY(-1px); }
+        .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+        .btn-outline:hover { background: var(--navy); color: var(--white); }
+
+        .footer {
+            background: var(--navy-deep); color: rgba(255,255,255,0.7);
+            text-align: center; padding: 2.5rem 1.5rem;
+        }
+        .footer-brand {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 900; color: var(--white); font-size: 1.15rem;
+        }
+        .footer-legal { font-size: 0.8rem; margin-top: 0.5rem; opacity: 0.7; }
+
+        @media (max-width: 600px) {
+            .story-hero { padding-top: 110px; }
+            .story-body { font-size: 1.05rem; }
+            .story-body blockquote { font-size: 1.15rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Brimley <span>for Utah</span></a>
+            <a href="story.html" class="nav-back">&larr; All Stories</a>
+        </div>
+    </nav>
+
+    <section class="story-hero">
+        <span class="eyebrow">A Story From Bill</span>
+        <h1>The Only Thing We<br>Leave Behind</h1>
+        <p class="lede">A broken-down truck, a stranger's kindness, and the lesson that shaped a life of service.</p>
+    </section>
+
+    <article class="story-body">
+        <p class="first">I was a young man chasing a country music dream in Nashville. I figured I had a pretty famous last name… and just enough talent to maybe catch a break. But life had other plans.</p>
+
+        <p>I came back to Utah, we had a three-year-old and a brand-new baby, and I needed something steady.</p>
+
+        <p>Not long into the journey home, my pickup broke down — transmission and rear end, both gone.</p>
+
+        <p>There I was… horse in the trailer, two dogs, everything I owned… in a town where I didn't know a single soul.</p>
+
+        <p>Except one connection.</p>
+
+        <p>A friend from Nashville had family there. I made the call.</p>
+
+        <p>This man — who had never met me — showed up in a big way.</p>
+
+        <p>He boarded and cared for my horse. He spent days helping me track down salvage parts. Got a mechanic involved and got me back on the road at his expense.</p>
+
+        <p>He didn't just help me… he carried me through an incredibly tough time.</p>
+
+        <p>When it was all said and done, I told him, "I don't even know what to say… you didn't know me, and you've done so much for me!"</p>
+
+        <p>And I'll never forget what he said:</p>
+
+        <blockquote>"Son… the only thing we leave behind is what we do for somebody else."</blockquote>
+
+        <p>That lesson changed me, and now, some thirty-five years later, I do what I can to pass it forward.</p>
+
+        <p>That old man retaught me what my parents had taught me growing up — but this time, I was the one in need… and it drove it home.</p>
+
+        <h2>Why I Serve</h2>
+
+        <p>That's why today you'll find me building BNI, serving in Rotary, church and family service… playing music for residents with dementia and Alzheimer's… and doing my best to show up for people — wherever, whenever, however I can.</p>
+
+        <p>And truth be told… that's one of the main reasons I'm running for County Commissioner.</p>
+
+        <p>Because I believe leadership isn't about position — it's about service.</p>
+
+        <p>At a different level, yes… but the same principle:</p>
+
+        <blockquote>The only thing we leave behind is what we do for somebody else.</blockquote>
+    </article>
+
+    <div class="story-signoff">
+        <p class="name">William (Bill) Brimley</p>
+        <p class="role">Utah County Commissioner — Seat B</p>
+        <p class="phone">801-709-6575</p>
+    </div>
+
+    <section class="story-cta">
+        <h3>If this resonates, I'd love to connect.</h3>
+        <p>Help bring service-driven leadership to Utah County.</p>
+        <a href="index.html#donate" class="btn btn-red">Support the Campaign</a>
+        <a href="story.html" class="btn btn-outline">More Stories</a>
+    </section>
+
+    <footer class="footer">
+        <p class="footer-brand">Brimley for Utah County</p>
+        <p>Commissioner — Seat B</p>
+        <p class="footer-legal">Paid for by Committee to Elect Bill Brimley</p>
+    </footer>
+
+</body>
+</html>
