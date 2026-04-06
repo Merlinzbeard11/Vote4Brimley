@@ -1073,6 +1073,31 @@
         </div>
     </section>
 
+    <!-- STORY FEATURE -->
+    <section style="padding:80px 1.5rem;background:#f8f9fb;border-top:1px solid var(--gray-100);border-bottom:1px solid var(--gray-100);">
+        <div class="container">
+            <div class="reveal" style="display:grid;grid-template-columns:1fr 1.2fr;gap:3rem;align-items:center;max-width:1000px;margin:0 auto;">
+                <a href="story.html" style="display:block;border-radius:8px;overflow:hidden;box-shadow:0 14px 40px rgba(0,0,0,0.18);">
+                    <img src="images/wilford-ski.jpg" alt="Wilford Brimley skiing at Alta" style="width:100%;display:block;">
+                </a>
+                <div>
+                    <p class="eyebrow" style="color:var(--red);font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:0.75rem;">A Story From Bill</p>
+                    <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:clamp(1.75rem,3vw,2.5rem);color:var(--navy);line-height:1.15;margin-bottom:1rem;">Just Ski the Snow Underneath You</h2>
+                    <p style="color:var(--gray-700);font-size:1.05rem;margin-bottom:1.5rem;">A lesson Bill's father, Wilford Brimley, learned from legendary skier Alf Engen at Alta — and the mindset Bill brings to leading Utah County. A short read about facing big mountains one turn at a time.</p>
+                    <a href="story.html" class="btn btn-red">Read Bill's Story &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        @media (max-width: 720px) {
+            section .reveal[style*="grid-template-columns:1fr 1.2fr"] {
+                grid-template-columns: 1fr !important;
+                gap: 1.75rem !important;
+            }
+        }
+    </style>
+
     <!-- DONATE -->
     <section class="donate" id="donate">
         <div class="container">
